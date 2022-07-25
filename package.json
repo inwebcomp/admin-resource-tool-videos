@@ -11,12 +11,12 @@
     },
     "devDependencies": {
         "cross-env": "^5.0.0",
-        "laravel-mix": "^1.0"
-    },
-    "dependencies": {
+        "laravel-mix": "^1.0",
         "vue": "^2.5.21",
         "vuedraggable": "^2.23.2",
         "vue-template-compiler": "^2.5.21",
         "form-backend-validation": "^2.3.6"
+    },
+    "dependencies": {
     }
 }

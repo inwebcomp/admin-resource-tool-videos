@@ -205,8 +205,21 @@
                             {type: 'success'},
                         )
                     }
-                }).catch(() => {
+                }).catch((e) => {
                     this.loading = false
+
+                    files.forEach(file => {
+                        const found = this.loadedFiles.find(value => value.file_name == file.name)
+
+                        if (found) {
+                            found.loading = false;
+                            if (e && e.data && e.data.message) {
+                                found.errors = [...found.errors, e.data.message]
+                            }
+                        }
+                    })
+
+                    this.fetch()
                 })
             },
 
